@@ -9,10 +9,10 @@ module.exports = {
         sans: ["Poppins", "sans-serif"],
       },
       colors: {
-        dark: "#272232",
+        dark: "#121E23",
         light: "#FFFFFF",
-        primary: "#E85434",
-        secondary: "#ECFCFB",
+        primary: "#01A7C2",
+        secondary: "#EE372C",
       },
       container: {
         padding: {

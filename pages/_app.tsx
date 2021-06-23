@@ -12,19 +12,7 @@ function App({ Component, pageProps, router }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Cursor />
-      <motion.div
-        animate={{
-          width: ["0vw", "100vw", "75vw"],
-          right: ["100%", "0%", "-5%"],
-          skewX: ["-15deg", "5deg", "5deg"],
-        }}
-        transition={{
-          duration: 1,
-          delay: 0,
-          ease: "easeInOut",
-        }}
-        className="absolute h-[100vh] bg-secondary"
-      />
+
       <AnimatePresence>
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>

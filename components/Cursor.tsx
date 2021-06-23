@@ -26,7 +26,7 @@ const Cursor = () => {
   return (
     <motion.div
       id="cursor "
-      className="fixed w-[1rem] h-[1rem] rounded-full bg-primary z-50 mix-blend-exclusion pointer-events-none"
+      className="fixed w-[1rem] h-[1rem] rounded-full bg-primary z-50 mix-blend-difference pointer-events-none"
       style={{
         translateX: cursorXSpring,
         translateY: cursorYSpring,
