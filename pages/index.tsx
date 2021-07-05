@@ -61,7 +61,7 @@ const index = () => {
                 ease: [0.4, 0.13, 0.23, 0.96],
                 delay: 0.25,
               }}
-              className="absolute md:relative flex-shrink-0 w-[100vw] h-[100%] md:max-w-[354px] md:h-[75%] my-auto overflow-hidden "
+              className="absolute md:relative flex-shrink-0 w-[100vw] h-[100%] md:w-[25vw] md:max-w-[454px] md:h-[75%] my-auto overflow-hidden "
               layoutId={`profile-img-wrapper`}
             >
               <motion.img
@@ -81,7 +81,7 @@ const index = () => {
                   delay: 0.75,
                   ease: [0.4, 0.13, 0.23, 0.96],
                 }}
-                className="after:block after:absolute after:w-full after:h-[75%] after:inset-0 after:top-auto after:bg-gradient-to-t after:from-dark md:after:hidden"
+                className="after:block after:absolute after:w-full after:h-[50%] after:inset-0 after:top-auto after:bg-gradient-to-t after:from-dark md:after:hidden"
               />
             </motion.div>
           </AnimatePresence>
@@ -102,7 +102,7 @@ const index = () => {
                 variants={itemAnimation}
                 className="flex-shrink-0 w-full md:w-auto"
               >
-                <Link href="project/[id]" as="project/1">
+                <Link href="projects">
                   <a href="">
                     <Button>Mira mi trabajo</Button>
                   </a>

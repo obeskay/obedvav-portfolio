@@ -13,11 +13,13 @@ function App({ Component, pageProps, router }) {
       </Head>
       <Cursor />
 
-      <AnimateSharedLayout>
-        <AnimatePresence exitBeforeEnter>
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
-      </AnimateSharedLayout>
+      <AnimatePresence>
+        <AnimateSharedLayout>
+          <AnimatePresence exitBeforeEnter>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
+        </AnimateSharedLayout>
+      </AnimatePresence>
     </div>
   );
 }
