@@ -51,7 +51,7 @@ const index = () => {
         initial="hidden"
         animate="show"
         exit="exit"
-        className="absolute flex items-center justify-center h-[100vh] w-[100vw] inset-0"
+        className="absolute flex items-center justify-center h-[-webkit-fill-available] md:h-[100vh] w-[100vw] inset-0"
       >
         <motion.div className="container flex flex-wrap md:flex-nowrap h-full md:space-x-[4rem] justify-center">
           <AnimatePresence>

@@ -6,7 +6,12 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: none !important; 
+}
+
+@screen lg {
+  html, a{
+    cursor: none !important; 
+  }
 }
 
 body {
