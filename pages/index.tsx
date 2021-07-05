@@ -61,7 +61,7 @@ const index = () => {
                 ease: [0.4, 0.13, 0.23, 0.96],
                 delay: 0.25,
               }}
-              className="absolute md:relative flex-shrink-0 w-[100vw] h-[100vh] md:max-w-[354px] md:h-[75vh] my-auto overflow-hidden "
+              className="absolute md:relative flex-shrink-0 w-[100vw] h-[100%] md:max-w-[354px] md:h-[75%] my-auto overflow-hidden "
               layoutId={`profile-img-wrapper`}
             >
               <motion.img
