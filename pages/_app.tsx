@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Cursor from "../components/Cursor";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 
 import "../styles/global.css";
 
@@ -13,9 +13,11 @@ function App({ Component, pageProps, router }) {
       </Head>
       <Cursor />
 
-      <AnimatePresence>
-        <Component {...pageProps} key={router.route} />
-      </AnimatePresence>
+      <AnimateSharedLayout>
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
+      </AnimateSharedLayout>
     </div>
   );
 }

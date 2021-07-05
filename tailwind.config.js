@@ -37,6 +37,9 @@ module.exports = {
         gardientMove:
           "gradientMove 10s cubic-bezier(0.03, 0.30, 0.79, 1) infinite",
       },
+      transitionTimingFunction: {
+        superEase: "cubic-bezier(0.4, 0.13, 0.23, 0.96)",
+      },
       keyframes: {
         noiseMove: {
           "0%, 100%": { transform: "translate(0, 0)" },
