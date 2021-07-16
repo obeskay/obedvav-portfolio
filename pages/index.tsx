@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import Button from "../components/Button";
+import TextReveal from "../components/TextReveal";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import resolveConfig from "tailwindcss/resolveConfig";
@@ -20,15 +21,11 @@ const index = () => {
   const itemAnimation = {
     hidden: {
       opacity: 0,
-      scale: 0.9,
       y: 50,
-      skewY: -5,
     },
     show: {
       opacity: 1,
-      scale: 1,
       y: 0,
-      skewY: 0,
       transition: {
         ease: [0.4, 0.13, 0.23, 0.96],
         duration: 1,
@@ -36,7 +33,6 @@ const index = () => {
     },
     exit: {
       opacity: 0,
-      scale: 0.9,
       y: 20,
       transition: {
         ease: [0.4, 0.13, 0.23, 0.96],
@@ -76,6 +72,7 @@ const index = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
                 transition={{
                   duration: 1,
                   delay: 0.75,
@@ -87,16 +84,10 @@ const index = () => {
           </AnimatePresence>
 
           <motion.div className="z-10 mb-[2rem] mt-auto md:my-auto space-y-[1.5rem] max-w-[520px] text-light md:text-dark">
-            <motion.h1 variants={itemAnimation}>
+            <TextReveal className="text-3xl">
               Hago que disfrutes estar en un sitio web
-            </motion.h1>
-            <motion.p
-              variants={itemAnimation}
-              className="hidden text-lg md:block"
-            >
-              Construyo sitios increíbles a través de dos pilares: la
-              experiencia del usuario y la interfáz
-            </motion.p>
+            </TextReveal>
+
             <motion.div className="font-lg flex flex-wrap md:flex-nowrap space-y-[1rem] md:space-x-[1rem] md:space-y-0">
               <motion.div
                 variants={itemAnimation}

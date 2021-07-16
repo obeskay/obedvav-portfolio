@@ -2,6 +2,7 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../components/Button";
 import Link from "next/link";
+import TextReveal from "../components/TextReveal";
 
 const me = () => {
   const wrapperAnimation = {
@@ -16,15 +17,11 @@ const me = () => {
   const itemAnimation = {
     hidden: {
       opacity: 0,
-      scale: 0.9,
       y: 50,
-      skewY: -5,
     },
     show: {
       opacity: 1,
-      scale: 1,
       y: 0,
-      skewY: 0,
       transition: {
         ease: [0.4, 0.13, 0.23, 0.96],
         duration: 1,
@@ -32,7 +29,6 @@ const me = () => {
     },
     exit: {
       opacity: 0,
-      scale: 0.9,
       y: 20,
       transition: {
         ease: [0.4, 0.13, 0.23, 0.96],
@@ -56,7 +52,7 @@ const me = () => {
               ease: [0.4, 0.13, 0.23, 0.96],
               delay: 0.25,
             }}
-            className="relative flex-shrink-0 w-[50vw] h-[50vh] md:w-[35vw] md:h-[100vh] m-auto overflow-hidden"
+            className="relative flex-shrink-0 w-[50vw] h-[50vh] md:w-[35vw] md:h-[-webkit-fill-available] m-auto overflow-hidden"
             layoutId={`profile-img-wrapper`}
           >
             <motion.img
@@ -76,7 +72,7 @@ const me = () => {
 
         <motion.div className="w-full h-full flex justify-center p-[1rem] md:p-[4rem] md:pl-0">
           <motion.div className="max-w-[520px] space-y-[1.5rem] text-lg">
-            <motion.h1 variants={itemAnimation}>Hola, soy Obed</motion.h1>
+            <TextReveal className="text-3xl">Hola, soy Obed</TextReveal>
             <motion.p variants={itemAnimation}>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             </motion.p>
@@ -95,7 +91,7 @@ const me = () => {
             <motion.div variants={itemAnimation}>
               <Link href="/">
                 <a>
-                  <Button className="w-auto">Regresar</Button>
+                  <Button className="inline-block">Regresar</Button>
                 </a>
               </Link>
             </motion.div>

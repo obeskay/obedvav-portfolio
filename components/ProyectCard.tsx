@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import TextReveal from "./TextReveal";
 
 const getRandomArbitrary = (min, max) => {
   return Math.random() * (max - min) + min;
@@ -8,9 +9,11 @@ const getRandomArbitrary = (min, max) => {
 const ProyectCard = (props) => {
   return (
     <div
-      className={`h-[9rem] w-full md:w-[16rem] p-4 text-dark shadow-lg flex items-center justify-center ${props.className}`}
+      className={`w-full text-dark flex items-center justify-center text-center ${props.className}`}
     >
-      Proyecto
+      <TextReveal textCenter className="text-[7vw] md:text-[4vw]">
+        {props.nombre}
+      </TextReveal>
     </div>
   );
 };
