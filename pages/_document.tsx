@@ -19,11 +19,11 @@ class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@600&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
             rel="stylesheet"
           />
         </Head>
-        <body className="font-sans select-none text-dark text-opacity-80 dark:text-light dark:text-opacity-80">
+        <body className="font-sans select-none bg-light text-dark">
           <Main />
           <NextScript />
         </body>

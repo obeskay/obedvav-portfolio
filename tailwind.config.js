@@ -6,12 +6,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Asap Condensed", "sans-serif"],
+        sans: ["Montserrat", "sans-serif"],
       },
       colors: {
-        dark: "#121E23",
+        dark: "#023437",
         light: "#FFFFFF",
-        primary: "#01A7C2",
+        primary: "#008698",
         secondary: "#EE372C",
       },
       container: {
@@ -76,7 +76,7 @@ module.exports = {
         h1: { "@apply text-3xl": {} },
         h2: { "@apply text-2xl": {} },
         h3: { "@apply text-xl": {} },
-        ".spaced-text": { "@apply tracking-[0.5rem] uppercase": "" },
+        ".spaced-text": { "@apply tracking-[0.25rem] uppercase": "" },
       });
     }),
   ],

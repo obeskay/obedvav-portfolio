@@ -8,12 +8,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @screen lg {
   html, a{
     cursor: none !important; 
+    
   }
 }
 
 body {
+
   overflow-x: hidden;
 }

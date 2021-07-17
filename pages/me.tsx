@@ -44,7 +44,7 @@ const me = () => {
       animate="show"
       exit="exit"
     >
-      <motion.div className="w-full flex flex-wrap md:flex-nowrap h-full space-y-[1.5rem] space-x-0 md:space-y-0 md:space-x-[4rem] justify-center align-center">
+      <motion.div className="w-full flex flex-wrap md:flex-nowrap h-[100vh] space-y-[1.5rem] space-x-0 md:space-y-0 md:space-x-[4rem] justify-center align-center">
         <AnimatePresence>
           <motion.div
             transition={{

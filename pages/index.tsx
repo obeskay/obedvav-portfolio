@@ -57,6 +57,9 @@ const index = () => {
                 ease: [0.4, 0.13, 0.23, 0.96],
                 delay: 0.25,
               }}
+              exit={{
+                y: "100%",
+              }}
               className="absolute md:relative flex-shrink-0 w-[100vw] h-[100%] md:w-[25vw] md:max-w-[454px] md:h-[75%] my-auto overflow-hidden "
               layoutId={`profile-img-wrapper`}
             >
@@ -78,13 +81,13 @@ const index = () => {
                   delay: 0.75,
                   ease: [0.4, 0.13, 0.23, 0.96],
                 }}
-                className="after:block after:absolute after:w-full after:h-[50%] after:inset-0 after:top-auto after:bg-gradient-to-t after:from-dark md:after:hidden"
+                className="after:block after:absolute after:w-full after:h-[50%] after:inset-0 after:top-auto after:bg-gradient-to-t after:from-black md:after:hidden"
               />
             </motion.div>
           </AnimatePresence>
 
           <motion.div className="z-10 mb-[2rem] mt-auto md:my-auto space-y-[1.5rem] max-w-[520px] text-light md:text-dark">
-            <TextReveal className="text-3xl">
+            <TextReveal className="text-3xl ">
               Hago que disfrutes estar en un sitio web
             </TextReveal>
 
@@ -95,7 +98,7 @@ const index = () => {
               >
                 <Link href="projects">
                   <a href="">
-                    <Button>Mira mi trabajo</Button>
+                    <Button>⚡️ Mira mi trabajo</Button>
                   </a>
                 </Link>
               </motion.div>
@@ -106,7 +109,7 @@ const index = () => {
                 <Link href="me">
                   <a href="">
                     <Button outlined className="w-full text-light md:text-dark">
-                      Conóceme
+                      😃 Conóceme
                     </Button>
                   </a>
                 </Link>
