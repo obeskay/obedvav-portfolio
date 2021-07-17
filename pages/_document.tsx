@@ -23,7 +23,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body className="font-sans select-none bg-light text-dark">
+        <body className="font-sans select-none bg-light text-dark max-w-[100vw] overflow-x-hidden">
           <Main />
           <NextScript />
         </body>

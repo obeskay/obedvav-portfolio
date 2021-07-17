@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import TextReveal from "../components/TextReveal";
 import ProjectCard from "../components/ProjectCard";
 import Button from "../components/Button";
@@ -42,11 +42,60 @@ const projects = () => {
   return (
     <>
       <motion.div
-        variants={wrapperAnimation}
-        initial="hidden"
-        animate="show"
-        exit="exit"
+        className="fixed z-10 bottom-[2rem] right-[1rem]"
+        initial={{ translateX: 100, opacity: 0 }}
+        animate={{ translateX: 0, opacity: 1 }}
+        exit={{ translateX: 100, opacity: 0 }}
       >
+        <Link href="/">
+          <a>
+            <Button className="inline-block">Regresar</Button>
+          </a>
+        </Link>
+      </motion.div>
+      <motion.div
+        animate={{ opacity: 0, y: "100vh" }}
+        exit={{ opacity: 1, y: 0 }}
+        transition={{
+          ease: [0.4, 0.13, 0.23, 0.96],
+          duration: 1.5,
+          delay: 0.25,
+        }}
+        layout
+        className="absolute flex items-center justify-center h-[-webkit-fill-available] md:h-[100vh] w-[100vw] inset-0"
+      >
+        <motion.div
+          transition={{
+            duration: 1.5,
+            ease: [0.4, 0.13, 0.23, 0.96],
+          }}
+          className="relative flex-shrink-0 w-[100vw] h-[100%] md:w-[25vw] md:max-w-[454px] md:h-[75%] my-auto overflow-hidden "
+          layoutId={`profile-img-wrapper`}
+        >
+          <motion.img
+            transition={{
+              duration: 1.25,
+              ease: [0.4, 0.13, 0.23, 0.96],
+            }}
+            src={obedvavimg}
+            layoutId={`profile-img`}
+            className="object-cover w-full h-full m-auto "
+          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: 1,
+              delay: 0.75,
+              ease: [0.4, 0.13, 0.23, 0.96],
+            }}
+            className="after:block after:absolute after:w-full after:h-[50%] after:inset-0 after:top-auto after:bg-gradient-to-t after:from-black md:after:hidden"
+          />
+        </motion.div>
+      </motion.div>
+
+      <motion.div variants={wrapperAnimation} layout>
         <motion.div
           initial={{ opacity: 1, y: "-100%" }}
           animate={{ opacity: 1, y: "0" }}
@@ -62,27 +111,20 @@ const projects = () => {
             <TextReveal className="text-2xl">
               He trabajado en estos proyectos:
             </TextReveal>
-            <motion.div variants={itemAnimation}>
-              <Link href="/">
-                <a>
-                  <Button className="inline-block">Regresar</Button>
-                </a>
-              </Link>
-            </motion.div>
           </motion.div>
         </motion.div>
+
         <motion.div className="w-full">
           <ProjectCard
-            className="bg-black/50"
+            // className="bg-yellow-500/5 text-light"
             nombre="WOOW ¡Todo bien!"
-            imagen2="https://cdn.dribbble.com/users/97388/screenshots/16051439/media/980366ec4b55bc2369a247cc31d64158.png?compress=1&resize=1600x1200"
             imagen1="/img/projects/woow/frame1.jpg"
           />
           <ProjectCard
-            className="bg-black/50"
-            nombre="WOOW ¡Todo bien!"
-            imagen1="https://cdn.dribbble.com/users/97388/screenshots/16051439/media/980366ec4b55bc2369a247cc31d64158.png?compress=1&resize=1600x1200"
-            imagen2="/img/projects/woow/frame1.jpg"
+            nombre="Liverpool"
+            // className="bg-pink-600/5 text-light"
+
+            imagen1="/img/projects/liverpool/frame1.jpg"
           />
         </motion.div>
       </motion.div>

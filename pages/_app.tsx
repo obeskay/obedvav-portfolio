@@ -14,7 +14,7 @@ function App({ Component, pageProps, router }) {
       </Head>
       <Cursor />
 
-      <AnimateSharedLayout type="switch">
+      <AnimateSharedLayout>
         <AnimatePresence exitBeforeEnter>
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
