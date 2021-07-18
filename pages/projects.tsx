@@ -108,7 +108,12 @@ const projects = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div variants={wrapperAnimation} layout>
+      <motion.div
+        variants={wrapperAnimation}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+      >
         <motion.div
           initial={{ opacity: 1, y: "-100%" }}
           animate={{ opacity: 1, y: "0" }}
@@ -129,16 +134,19 @@ const projects = () => {
 
         <motion.div className="w-full">
           <ProjectCard
-            nombre="WOOW ¡Todo bien!"
-            imagen1="/img/projects/woow/frame1.jpg"
+            name="WOOW ¡Todo bien!"
+            description="Cree y programé la interfáz y la experiencia de usuario para el marketplace de seguros que busca romper con el estereotipo de la aseguradora aburrida."
+            imagen="/img/projects/woow/frame1.jpg"
           />
           <ProjectCard
-            nombre="Nook Model Management"
-            imagen1="/img/projects/nook/frame1.jpg"
+            name="Nook Model Management"
+            description="Diseñé y programé un sitio limpio y elegante para una importante agencia de modelos en CDMX."
+            imagen="/img/projects/nook/frame1.jpg"
           />
           <ProjectCard
-            nombre="Liverpool"
-            imagen1="/img/projects/liverpool/frame1.jpg"
+            name="Liverpool"
+            description="Rediseñé el flujo de contratación para un seguro de celulares en el conocido sitio de Liverpool."
+            imagen="/img/projects/liverpool/frame1.jpg"
           />
         </motion.div>
       </motion.div>

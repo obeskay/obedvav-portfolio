@@ -47,11 +47,9 @@ const ProjectCard = (props) => {
         <motion.div className="container h-[100vh] flex justify-center mx-auto items-center">
           <motion.div className="relative ml-0 mr-auto space-y-[1.5rem]">
             <TextReveal className="text-[7vw] md:text-[4vw]">
-              {props.nombre}
+              {props.name}
             </TextReveal>
-            <motion.p variants={itemAnimation}>
-              WOOW busca romper el estereotipo de aseguradora.
-            </motion.p>
+            <motion.p variants={itemAnimation}>{props.description}</motion.p>
             <motion.div variants={itemAnimation} className="inline-block">
               <Button>Ver detalles</Button>
             </motion.div>
@@ -60,7 +58,7 @@ const ProjectCard = (props) => {
             <motion.div
               initial={{ height: 0 }}
               animate={{ height: 380 }}
-              exit={{ height: 0 }}
+              exit={{ opacity: 0 }}
               transition={{
                 duration: 1.5,
                 ease: [0.4, 0.13, 0.23, 0.96],
@@ -77,7 +75,7 @@ const ProjectCard = (props) => {
                   duration: 1.25,
                   ease: [0.4, 0.13, 0.23, 0.96],
                 }}
-                src={props.imagen1}
+                src={props.imagen}
                 className="object-cover w-full h-full m-auto"
               />
             </motion.div>
@@ -87,7 +85,7 @@ const ProjectCard = (props) => {
 
       <motion.div className="md:hidden p-[1rem] py-[4rem] space-y-[1.5rem]">
         <TextReveal className="text-[7vw] md:text-[4vw]">
-          {props.nombre}
+          {props.name}
         </TextReveal>
         <motion.div
           initial={{ height: 0 }}
@@ -107,13 +105,11 @@ const ProjectCard = (props) => {
               duration: 1.25,
               ease: [0.4, 0.13, 0.23, 0.96],
             }}
-            src={props.imagen1}
+            src={props.imagen}
             className="object-cover w-full h-full m-auto"
           />
         </motion.div>
-        <motion.p variants={itemAnimation}>
-          WOOW busca romper el estereotipo de aseguradora.
-        </motion.p>
+        <motion.p variants={itemAnimation}>{props.description}</motion.p>
         <motion.div variants={itemAnimation} className="inline-block">
           <Button>Ver detalles</Button>
         </motion.div>
