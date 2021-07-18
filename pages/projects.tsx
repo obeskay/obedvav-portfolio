@@ -135,7 +135,7 @@ const projects = () => {
         <motion.div className="w-full">
           <ProjectCard
             name="WOOW ¡Todo bien!"
-            description="Cree y programé la interfáz y la experiencia de usuario para el marketplace de seguros que busca romper con el estereotipo de la aseguradora aburrida."
+            description="Cree la experiencia de usuario para la startup de seguros que busca romper con el aburrido estereotipo de aseguradora."
             imagen="/img/projects/woow/frame1.jpg"
           />
           <ProjectCard
@@ -145,7 +145,7 @@ const projects = () => {
           />
           <ProjectCard
             name="Liverpool"
-            description="Rediseñé el flujo de contratación para un seguro de celulares en el conocido sitio de Liverpool."
+            description="Rediseñé el flujo de contratación para Protección Celular en el conocido sitio de Liverpool."
             imagen="/img/projects/liverpool/frame1.jpg"
           />
         </motion.div>

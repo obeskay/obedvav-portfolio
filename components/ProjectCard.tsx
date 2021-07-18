@@ -44,7 +44,7 @@ const ProjectCard = (props) => {
         variants={wrapperAnimation}
         className={`hidden md:flex w-full items-center justify-center ${props.className}`}
       >
-        <motion.div className="container h-[100vh] flex justify-center mx-auto items-center">
+        <motion.div className="container h-[100vh] flex justify-center mx-auto items-center space-x-[2rem]">
           <motion.div className="relative ml-0 mr-auto space-y-[1.5rem]">
             <TextReveal className="text-[7vw] md:text-[4vw]">
               {props.name}
@@ -89,7 +89,7 @@ const ProjectCard = (props) => {
         </TextReveal>
         <motion.div
           initial={{ height: 0 }}
-          animate={{ height: 320 }}
+          animate={{ height: 228 }}
           transition={{
             duration: 1.5,
             ease: [0.4, 0.13, 0.23, 0.96],
