@@ -47,7 +47,21 @@ const me = () => {
       >
         <Link href="/">
           <a>
-            <Button className="inline-block">Regresar</Button>
+            <Button className="flex items-center">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 25 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.0988 11.3106V13.3106H8.09879L13.5988 18.8106L12.1788 20.2306L4.25879 12.3106L12.1788 4.39056L13.5988 5.81056L8.09879 11.3106H20.0988Z"
+                  fill="white"
+                />
+              </svg>
+              <span className="ml-[1rem] hidden md:block">Regresar</span>
+            </Button>
           </a>
         </Link>
       </motion.div>

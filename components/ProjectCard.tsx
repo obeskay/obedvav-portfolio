@@ -60,12 +60,13 @@ const ProjectCard = (props) => {
             <motion.div
               initial={{ height: 0 }}
               animate={{ height: 380 }}
+              exit={{ height: 0 }}
               transition={{
                 duration: 1.5,
                 ease: [0.4, 0.13, 0.23, 0.96],
                 delay: 0.25,
               }}
-              className="relative w-[560px] overflow-hidden"
+              className="relative w-[400px] xl:w-[560px] overflow-hidden "
             >
               <motion.img
                 initial={{ scale: 1.25 }}
@@ -77,7 +78,7 @@ const ProjectCard = (props) => {
                   ease: [0.4, 0.13, 0.23, 0.96],
                 }}
                 src={props.imagen1}
-                className="object-cover w-full m-auto"
+                className="object-cover w-full h-full m-auto"
               />
             </motion.div>
           </ParallaxItem>
