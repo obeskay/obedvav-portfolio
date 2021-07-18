@@ -59,7 +59,6 @@ const projects = () => {
         transition={{
           ease: [0.4, 0.13, 0.23, 0.96],
           duration: 1.5,
-          delay: 0.25,
         }}
         layout
         className="absolute flex items-center justify-center h-[-webkit-fill-available] md:h-[100vh] w-[100vw] inset-0"
@@ -109,21 +108,22 @@ const projects = () => {
         >
           <motion.div className="max-w-[520px] space-y-[1.5rem] text-lg">
             <TextReveal className="text-2xl">
-              He trabajado en estos proyectos:
+              Proyectos seleccionados
             </TextReveal>
           </motion.div>
         </motion.div>
 
         <motion.div className="w-full">
           <ProjectCard
-            // className="bg-yellow-500/5 text-light"
             nombre="WOOW ¡Todo bien!"
             imagen1="/img/projects/woow/frame1.jpg"
           />
           <ProjectCard
+            nombre="Nook Model Management"
+            imagen1="/img/projects/nook/frame1.jpg"
+          />
+          <ProjectCard
             nombre="Liverpool"
-            // className="bg-pink-600/5 text-light"
-
             imagen1="/img/projects/liverpool/frame1.jpg"
           />
         </motion.div>

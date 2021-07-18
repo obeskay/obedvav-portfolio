@@ -16,7 +16,7 @@ type ParallaxProps = {
 const ParallaxItem = ({
   children,
   className,
-  offset = 200,
+  offset = 300,
 }: ParallaxProps): JSX.Element => {
   const prefersReducedMotion = useReducedMotion();
   const [elementTop, setElementTop] = useState(0);
@@ -25,11 +25,11 @@ const ParallaxItem = ({
 
   const { scrollY } = useViewportScroll();
 
-  const initial = elementTop - clientHeight;
+  const initial = elementTop - offset - clientHeight;
   const final = elementTop + offset;
 
   const yRange = useTransform(scrollY, [initial, final], [offset, -offset]);
-  const y = useSpring(yRange, { stiffness: 400, damping: 90 });
+  const y = useSpring(yRange, { stiffness: 180, damping: 80 });
 
   useLayoutEffect(() => {
     const element = ref.current;
@@ -51,7 +51,7 @@ const ParallaxItem = ({
   }
 
   return (
-    <motion.div className={`absolute ${className}`} ref={ref} style={{ y }}>
+    <motion.div className={` ${className}`} ref={ref} style={{ y }}>
       {children}
     </motion.div>
   );
