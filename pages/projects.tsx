@@ -105,16 +105,19 @@ const projects = () => {
         <motion.div className="w-full">
           <ProjectCard
             name="WOOW ¡Todo bien!"
+            roles={["ux/ui", "Frontend"]}
             description="Cree la experiencia de usuario para la startup de seguros que busca romper con el aburrido estereotipo de aseguradora."
             imagen="/img/projects/woow/frame1.jpg"
           />
           <ProjectCard
             name="Nook Model Management"
+            roles={["ux/ui", "Frontend", "Backend"]}
             description="Diseñé y programé un sitio limpio y elegante para una importante agencia de modelos en CDMX."
             imagen="/img/projects/nook/frame1.jpg"
           />
           <ProjectCard
             name="Liverpool"
+            roles={["ux/ui", "Frontend"]}
             description="Rediseñé el flujo de contratación para Protección Celular en el conocido sitio de Liverpool."
             imagen="/img/projects/liverpool/frame1.jpg"
           />

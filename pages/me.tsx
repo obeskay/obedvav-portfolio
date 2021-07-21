@@ -95,7 +95,7 @@ const me = () => {
                 que comencé a desarrollar prototipos de aplicaciones y sitios
                 web desde los 17 años. Más tarde aprendí a programar y desde
                 entonces me he dedicado a aportar "mi granito de arena" para
-                transformar a Internet en un lugar accesible e inclusivo que nos
+                transformar Internet en un lugar accesible e inclusivo que nos
                 deje una buena experiencia de uso y facilite las tareas diarias
                 a todos.
               </motion.p>

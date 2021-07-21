@@ -49,6 +49,17 @@ const ProjectCard = (props) => {
             <TextReveal className="text-[7vw] md:text-[4vw]">
               {props.name}
             </TextReveal>
+            <motion.div className="space-x-[1rem] ">
+              {props.roles.map((role) => (
+                <motion.label
+                  variants={itemAnimation}
+                  className="text-sm spaced-text"
+                  key={role}
+                >
+                  {role}
+                </motion.label>
+              ))}
+            </motion.div>
             <motion.p variants={itemAnimation}>{props.description}</motion.p>
             <motion.div variants={itemAnimation} className="inline-block">
               <Button>Ver detalles</Button>
@@ -87,6 +98,7 @@ const ProjectCard = (props) => {
         <TextReveal className="text-[7vw] md:text-[4vw]">
           {props.name}
         </TextReveal>
+
         <motion.div
           initial={{ height: 0 }}
           animate={{ height: 228 }}
@@ -108,6 +120,17 @@ const ProjectCard = (props) => {
             src={props.imagen}
             className="object-cover w-full h-full m-auto"
           />
+        </motion.div>
+        <motion.div className="space-x-[1rem] ">
+          {props.roles.map((role) => (
+            <motion.label
+              variants={itemAnimation}
+              className="text-sm spaced-text"
+              key={role}
+            >
+              {role}
+            </motion.label>
+          ))}
         </motion.div>
         <motion.p variants={itemAnimation}>{props.description}</motion.p>
         <motion.div variants={itemAnimation} className="inline-block">
