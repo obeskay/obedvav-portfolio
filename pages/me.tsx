@@ -76,7 +76,8 @@ const me = () => {
 
           <motion.div className="w-full md:max-h-[100%] md:overflow-y-scroll flex justify-center p-[1rem] md:p-[4rem] md:pl-0">
             <motion.div className="max-w-[520px] space-y-[1.5rem] text-lg">
-              <TextReveal className="text-3xl">Hola, soy Obed</TextReveal>
+              <TextReveal className="text-3xl">Hola, soy Obed </TextReveal>
+
               <motion.div className="space-x-[1rem]">
                 <motion.label
                   variants={itemAnimation}
@@ -96,13 +97,13 @@ const me = () => {
                 únicas que resuelvan las necesidades del usuario final.
               </motion.p>
               <motion.p variants={itemAnimation}>
-                Desde temprana edad me interesó el arte y la tecnología; por lo
-                que comencé a desarrollar prototipos de aplicaciones y sitios
-                web desde los 17 años. Más tarde aprendí a programar y desde
-                entonces me he dedicado a aportar "mi granito de arena" para
-                transformar Internet en un lugar accesible e inclusivo que nos
-                deje una buena experiencia de uso y facilite las tareas diarias
-                a todos.
+                A temprana edad me interesó el arte y la tecnología; por lo que
+                comencé a desarrollar prototipos de aplicaciones y sitios web
+                desde hace más de 5 años. Más tarde aprendí de manera
+                autodidacta a programar y desde entonces me he dedicado a
+                aportar "mi granito de arena" para transformar Internet en un
+                lugar accesible e inclusivo que nos deje una buena experiencia
+                de uso y facilite las tareas diarias a todos.
               </motion.p>
               <motion.p variants={itemAnimation}>
                 Creo firmemente que navegar por una web o una app no debería ser

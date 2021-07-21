@@ -60,9 +60,11 @@ const ProjectCard = (props) => {
                 </motion.label>
               ))}
             </motion.div>
-            <motion.p variants={itemAnimation}>{props.description}</motion.p>
+            <motion.p className="text-xl" variants={itemAnimation}>
+              {props.description}
+            </motion.p>
             <motion.div variants={itemAnimation} className="inline-block">
-              <Button>Ver detalles</Button>
+              <Button>Mira los detalles</Button>
             </motion.div>
           </motion.div>
           <ParallaxItem className="relative ml-auto mr-0">

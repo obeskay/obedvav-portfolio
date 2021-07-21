@@ -90,12 +90,6 @@ const projects = () => {
         exit="exit"
       >
         <motion.div className="w-full">
-          <div className="container mx-auto py-[2rem] md:pt-[8rem]">
-            <TextReveal className="text-2xl text-center">
-              Mis proyectos seleccionados:
-            </TextReveal>
-          </div>
-
           <ProjectCard
             name="WOOW ¡Todo bien!"
             roles={["ux/ui", "Frontend"]}

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   const { isCursorHover, setCursorHover } = useAppContext();
+  const { isCursorContact, setCursorContact } = useAppContext();
   return (
     <nav className="z-[10] hidden w-full md:block md:fixed  backdrop-blur-sm  mix-blend-difference">
       <div className="container flex py-[1rem] mx-auto text-sm  items-center spaced-text space-x-[1rem] justify-between  text-secondary">
@@ -41,7 +42,7 @@ const Navbar = () => {
               onHoverEnd={() => setCursorHover(false)}
               onClick={() => setCursorHover(false)}
             >
-              Trabajo
+              Mi trabajo
             </motion.a>
           </Link>
           <Link href="/me">
@@ -53,15 +54,18 @@ const Navbar = () => {
               Sobre mí
             </motion.a>
           </Link>
-          <Link href="/me">
-            <motion.a
-              onHoverStart={() => setCursorHover(true)}
-              onHoverEnd={() => setCursorHover(false)}
-              onClick={() => setCursorHover(false)}
-            >
-              Contacto
-            </motion.a>
-          </Link>
+          <motion.p
+            onHoverStart={() => {
+              setCursorHover(true);
+              setCursorContact(true);
+            }}
+            onHoverEnd={() => {
+              setCursorHover(false);
+              setCursorContact(false);
+            }}
+          >
+            Contáctame
+          </motion.p>
         </div>
       </div>
     </nav>

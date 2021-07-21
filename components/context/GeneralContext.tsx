@@ -7,9 +7,11 @@ const GeneralContext = ({ children }) => {
   const router = useRouter();
   const { query } = router;
   const [isCursorHover, setCursorHover] = useState(false);
+  const [isCursorContact, setCursorContact] = useState(false);
 
   useEffect(() => {
     setCursorHover(false);
+    setCursorContact(false);
   }, [router]);
 
   const wrapperAnimation = {
@@ -46,7 +48,14 @@ const GeneralContext = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ wrapperAnimation, itemAnimation, isCursorHover, setCursorHover }}
+      value={{
+        wrapperAnimation,
+        itemAnimation,
+        isCursorHover,
+        setCursorHover,
+        isCursorContact,
+        setCursorContact,
+      }}
     >
       {children}
     </AppContext.Provider>

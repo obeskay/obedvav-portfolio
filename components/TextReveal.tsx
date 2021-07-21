@@ -15,7 +15,7 @@ const TextReveal = ({ children, textCenter = false, ...rest }) => {
         >
           <motion.div
             className="inline-block"
-            initial={{ y: "300%", skewY: 30 }}
+            initial={{ y: "200%" }}
             animate="visible"
             exit="exit"
             variants={{
@@ -24,7 +24,7 @@ const TextReveal = ({ children, textCenter = false, ...rest }) => {
                 skewY: 0,
                 transition: {
                   delay: i * 0.1,
-                  duration: 0.75,
+                  duration: 0.5,
                   ease: [0.4, 0.13, 0.23, 0.96],
                 },
               }),
