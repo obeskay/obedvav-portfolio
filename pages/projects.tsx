@@ -4,40 +4,10 @@ import TextReveal from "../components/TextReveal";
 import ProjectCard from "../components/ProjectCard";
 import Button from "../components/Button";
 import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useAppContext } from "../components/context/GeneralContext";
 
 const projects = () => {
-  const wrapperAnimation = {
-    show: {
-      transition: {
-        delayChildren: 0.25,
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemAnimation = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-    },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: [0.4, 0.13, 0.23, 0.96],
-        duration: 1,
-      },
-    },
-    exit: {
-      opacity: 0,
-      y: 20,
-      transition: {
-        ease: [0.4, 0.13, 0.23, 0.96],
-        duration: 0.5,
-      },
-    },
-  };
+  const { wrapperAnimation, itemAnimation } = useAppContext();
   const obedvavimg = "/img/obed/obedvav1.jpg";
   return (
     <>

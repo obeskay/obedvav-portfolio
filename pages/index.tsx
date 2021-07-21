@@ -5,41 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../tailwind.config.js";
+import { useAppContext } from "../components/context/GeneralContext";
 
 const fullConfig = resolveConfig(tailwindConfig);
 const index = () => {
   const obedvavimg = "img/obed/obedvav1.jpg";
-  const wrapperAnimation = {
-    show: {
-      transition: {
-        delayChildren: 0.25,
-        staggerChildren: 0.1,
-      },
-    },
-  };
+  const { wrapperAnimation, itemAnimation } = useAppContext();
 
-  const itemAnimation = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-    },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: [0.4, 0.13, 0.23, 0.96],
-        duration: 1,
-      },
-    },
-    exit: {
-      opacity: 0,
-      y: 20,
-      transition: {
-        ease: [0.4, 0.13, 0.23, 0.96],
-        duration: 0.5,
-      },
-    },
-  };
   return (
     <motion.div
       variants={wrapperAnimation}

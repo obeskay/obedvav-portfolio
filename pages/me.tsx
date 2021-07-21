@@ -3,40 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import Button from "../components/Button";
 import Link from "next/link";
 import TextReveal from "../components/TextReveal";
+import { useAppContext } from "../components/context/GeneralContext";
 
 const me = () => {
-  const wrapperAnimation = {
-    show: {
-      transition: {
-        delayChildren: 0.25,
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemAnimation = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-    },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: [0.4, 0.13, 0.23, 0.96],
-        duration: 1,
-      },
-    },
-    exit: {
-      opacity: 0,
-      y: 20,
-      transition: {
-        ease: [0.4, 0.13, 0.23, 0.96],
-        duration: 0.5,
-      },
-    },
-  };
   const obedvavimg = "/img/obed/obedvav1.jpg";
+  const { wrapperAnimation, itemAnimation } = useAppContext();
   return (
     <>
       <motion.div
@@ -98,25 +69,56 @@ const me = () => {
             </motion.div>
           </AnimatePresence>
 
-          <motion.div className="w-full h-full flex justify-center p-[1rem] md:p-[4rem] md:pl-0">
+          <motion.div className="w-full md:max-h-[100%] md:overflow-y-scroll flex justify-center p-[1rem] md:p-[4rem] md:pl-0">
             <motion.div className="max-w-[520px] space-y-[1.5rem] text-lg">
               <TextReveal className="text-3xl">Hola, soy Obed</TextReveal>
+              <motion.div className="space-x-[1rem]">
+                <motion.label
+                  variants={itemAnimation}
+                  className="text-sm spaced-text"
+                >
+                  Diseñador UX/UI
+                </motion.label>
+                <motion.label
+                  variants={itemAnimation}
+                  className="text-sm spaced-text"
+                >
+                  Desarrollador Frontend
+                </motion.label>
+              </motion.div>
               <motion.p variants={itemAnimation}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Un experimentado diseñador enfocado en entregar experiencias
+                únicas que resuelvan las necesidades del usuario final.
               </motion.p>
               <motion.p variants={itemAnimation}>
-                Debitis facilis reiciendis minima necessitatibus nostrum
-                doloribus, quae cupiditate qui accusantium, provident dolorem
-                delectus voluptate.
+                Desde temprana edad me interesó el arte y la tecnología; por lo
+                que comencé a desarrollar prototipos de aplicaciones y sitios
+                web desde los 17 años. Más tarde aprendí a programar y desde
+                entonces me he dedicado a aportar "mi granito de arena" para
+                transformar a Internet en un lugar accesible e inclusivo que nos
+                deje una buena experiencia de uso y facilite las tareas diarias
+                a todos.
               </motion.p>
               <motion.p variants={itemAnimation}>
-                Deleniti qui excepturi sunt minima quisquam pariatur vel eius
-                laboriosam voluptatem et, quis aspernatur, laudantium quidem aut
-                corporis? Iste illo nobis dolorem, iure itaque modi voluptatibus
-                soluta aliquid dignissimos repellat hic et! Totam vero facilis
-                sed atque animi hic dolorum tenetur expedita? Hic unde a tempora
-                amet.
+                Creo firmemente que navegar por una web o una app no debería ser
+                una tarea compleja para nadie y esto se logra a través de la
+                intersección entre estética y funcionalidad.
               </motion.p>
+              <motion.hr variants={itemAnimation} />
+              <motion.div className="space-y-[1rem] pb-[4rem]">
+                <motion.p
+                  variants={itemAnimation}
+                  className="text-sm spaced-text"
+                >
+                  Correo: obedvav@gmail.com
+                </motion.p>
+                <motion.p
+                  variants={itemAnimation}
+                  className="text-sm spaced-text"
+                >
+                  Teléfono: 55 6034 8476
+                </motion.p>
+              </motion.div>
             </motion.div>
           </motion.div>
         </motion.div>
