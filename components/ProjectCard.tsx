@@ -64,7 +64,7 @@ const ProjectCard = (props) => {
                 ease: [0.4, 0.13, 0.23, 0.96],
                 delay: 0.25,
               }}
-              className="relative w-[400px] xl:w-[560px] overflow-hidden "
+              className="relative w-[400px] xl:w-[560px] overflow-hidden bg-dark/10"
             >
               <motion.img
                 initial={{ scale: 1.25 }}
