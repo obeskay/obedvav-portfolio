@@ -74,7 +74,7 @@ const me = () => {
             </motion.div>
           </AnimatePresence>
 
-          <motion.div className="w-full md:max-h-[100%] md:overflow-y-scroll flex justify-center p-[1rem] md:p-[4rem] md:pl-0">
+          <motion.div className="w-full md:max-h-[100%] md:overflow-y-scroll flex justify-center p-[1rem] md:p-[4rem] md:py-[8rem] md:pl-0">
             <motion.div className="max-w-[520px] space-y-[1.5rem] text-lg">
               <TextReveal className="text-3xl">Hola, soy Obed </TextReveal>
 
@@ -111,19 +111,21 @@ const me = () => {
                 intersección entre estética y funcionalidad.
               </motion.p>
               <motion.hr variants={itemAnimation} />
-              <motion.div className="space-y-[1rem] pb-[4rem]">
-                <motion.p
+              <motion.div className="space-y-[1rem] pb-[4rem] md:pb-[8rem]">
+                <motion.a
+                  href="mailto:obedvav@gmail.com"
                   variants={itemAnimation}
-                  className="text-sm spaced-text"
+                  className="block text-sm spaced-text"
                 >
                   Correo: obedvav@gmail.com
-                </motion.p>
-                <motion.p
+                </motion.a>
+                <motion.a
+                  href="tel:5560348476"
                   variants={itemAnimation}
-                  className="text-sm spaced-text"
+                  className="block text-sm spaced-text"
                 >
                   Teléfono: 55 6034 8476
-                </motion.p>
+                </motion.a>
               </motion.div>
             </motion.div>
           </motion.div>
