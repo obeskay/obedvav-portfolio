@@ -12,16 +12,21 @@ const me = () => {
     <>
       <motion.div
         className="fixed z-10 bottom-[2rem] right-[1rem]"
-        initial={{ translateX: 100, opacity: 0 }}
+        initial={{ translateX: "100%", opacity: 0 }}
         animate={{ translateX: 0, opacity: 1 }}
-        exit={{ translateX: 100, opacity: 0 }}
+        exit={{ translateX: "100%", opacity: 0 }}
+        transition={{
+          duration: 0.75,
+          ease: [0.4, 0.13, 0.23, 0.96],
+          delay: 0.25,
+        }}
       >
         <Link href="/">
           <a>
             <Button className="flex items-center">
               <svg
-                width="24"
-                height="24"
+                width="18"
+                height="18"
                 viewBox="0 0 25 25"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

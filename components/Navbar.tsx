@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   const { isCursorHover, setCursorHover } = useAppContext();
   return (
-    <nav className="fixed z-50 w-full bg-white/90 md:backdrop-blur-lg">
-      <div className="flex p-[1rem] md:px-[4rem] mx-auto text-sm border-b items-center spaced-text space-x-[1rem] justify-between border-primary/10 text-dark">
+    <nav className="z-[10] hidden w-full md:block md:fixed  backdrop-blur-sm  mix-blend-difference">
+      <div className="container flex py-[1rem] mx-auto text-sm  items-center spaced-text space-x-[1rem] justify-between  text-secondary">
         <Link href="/">
           <motion.a
             onHoverStart={() => setCursorHover(true)}
@@ -34,7 +34,7 @@ const Navbar = () => {
             </svg>
           </motion.a>
         </Link>
-        <div className="space-x-[1rem] flex align-center">
+        <div className="space-x-[2rem] flex align-center">
           <Link href="/projects">
             <motion.a
               onHoverStart={() => setCursorHover(true)}

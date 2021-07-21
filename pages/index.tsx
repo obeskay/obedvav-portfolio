@@ -67,7 +67,12 @@ const index = () => {
             >
               <Link href="projects">
                 <a href="">
-                  <Button>⚡️ Mira mi trabajo</Button>
+                  <Button className="flex items-center w-full">
+                    <span className="text-[1.5rem] leading-[0] mr-[0.5rem]">
+                      ⚡️
+                    </span>{" "}
+                    Mira mi trabajo
+                  </Button>
                 </a>
               </Link>
             </motion.div>
@@ -77,8 +82,14 @@ const index = () => {
             >
               <Link href="me">
                 <a href="">
-                  <Button outlined className="w-full text-light md:text-dark">
-                    😃 Conóceme
+                  <Button
+                    outlined
+                    className="flex items-center w-full text-light md:text-dark"
+                  >
+                    <span className="text-[1.5rem] leading-[0] mr-[0.5rem]">
+                      😃
+                    </span>{" "}
+                    Conóceme
                   </Button>
                 </a>
               </Link>

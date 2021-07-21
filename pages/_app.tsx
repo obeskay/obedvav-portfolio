@@ -15,8 +15,9 @@ function App({ Component, pageProps, router }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Cursor />
       <Navbar />
+      <Cursor />
+
       <AnimateSharedLayout>
         <AnimatePresence exitBeforeEnter>
           <Component {...pageProps} key={router.route} />

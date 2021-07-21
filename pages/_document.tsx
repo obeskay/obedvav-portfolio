@@ -23,7 +23,8 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body className="font-sans select-none bg-light text-dark max-w-[100vw] overflow-x-hidden">
+        <body className="font-sans select-none text-dark max-w-[100vw] overflow-x-hidden">
+          <div className="fixed z-[-1] w-[100vw] h-[webkit-fill-available] md:h-[100vh] bg-light" />
           <Main />
           <NextScript />
         </body>

@@ -13,7 +13,7 @@ html {
 }
 
 @screen lg {
-  html, a{
+  html, a, label{
     cursor: none !important; 
     
   }
