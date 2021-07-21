@@ -93,7 +93,7 @@ const projects = () => {
             ease: [0.4, 0.13, 0.23, 0.96],
             delay: 0.25,
           }}
-          className="w-full h-full flex justify-center p-[1rem] md:p-[4rem] md:py-[2rem] border-primary bg-light border-b"
+          className="w-full h-full flex justify-center p-[1rem] md:p-[4rem] md:py-[2rem] border-primary bg-light border-b !z-50"
         >
           <motion.div className="max-w-[520px] space-y-[1.5rem] text-lg">
             <TextReveal className="text-2xl">

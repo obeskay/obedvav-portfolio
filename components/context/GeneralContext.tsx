@@ -31,7 +31,7 @@ const GeneralContext = ({ children }) => {
       y: 0,
       transition: {
         ease: [0.4, 0.13, 0.23, 0.96],
-        duration: 1,
+        duration: 0.75,
       },
     },
     exit: {

@@ -2,6 +2,7 @@ import Head from "next/head";
 import Cursor from "../components/Cursor";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import GeneralContext from "../components/context/GeneralContext";
+import Navbar from "../components/Navbar";
 
 import "../styles/global.css";
 import "swiper/swiper.scss";
@@ -13,8 +14,9 @@ function App({ Component, pageProps, router }) {
         <title>obedvav | portafolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Cursor />
 
+      <Cursor />
+      <Navbar />
       <AnimateSharedLayout>
         <AnimatePresence exitBeforeEnter>
           <Component {...pageProps} key={router.route} />
