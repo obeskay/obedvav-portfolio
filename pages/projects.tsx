@@ -23,7 +23,7 @@ const projects = () => {
         }}
       >
         <Link href="/">
-          <a>
+          <motion.a>
             <Button className="flex items-center">
               <svg
                 width="18"
@@ -39,17 +39,14 @@ const projects = () => {
               </svg>
               <span className="ml-[1rem] hidden md:block">Regresar</span>
             </Button>
-          </a>
+          </motion.a>
         </Link>
       </motion.div>
       <motion.div
-        animate={{ opacity: 0, y: "100vh" }}
-        exit={{ opacity: 1, y: 0 }}
         transition={{
           ease: [0.4, 0.13, 0.23, 0.96],
           duration: 1.5,
         }}
-        layout
         className="absolute flex items-center justify-center h-[-webkit-fill-available] md:h-[100vh] w-[100vw] inset-0"
       >
         <motion.div
@@ -57,21 +54,21 @@ const projects = () => {
             duration: 1.5,
             ease: [0.4, 0.13, 0.23, 0.96],
           }}
-          className="relative flex-shrink-0 w-[100vw] h-[100%] md:w-[25vw] md:max-w-[454px] md:h-[75%] my-auto overflow-hidden "
           layoutId={`profile-img-wrapper`}
+          className="relative  flex-shrink-0 w-[100vw] h-[100%] md:w-[25vw] md:max-w-[454px] md:h-[75%] my-auto overflow-hidden "
         >
           <motion.img
             transition={{
               duration: 1.25,
               ease: [0.4, 0.13, 0.23, 0.96],
             }}
+            initial={{ opacity: 0 }}
             src={obedvavimg}
             layoutId={`profile-img`}
-            className="object-cover w-full h-full m-auto "
+            className="object-cover w-full h-full m-auto"
           />
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{
               duration: 1,
@@ -92,18 +89,21 @@ const projects = () => {
         <motion.div className="w-full">
           <ProjectCard
             name="WOOW ¡Todo bien!"
+            slug="https://woowtodobien.com/"
             roles={["ux/ui", "Frontend"]}
             description="Cree la experiencia de usuario para la startup de seguros que busca romper con el aburrido estereotipo de aseguradora."
             imagen="/img/projects/woow/frame1.jpg"
           />
           <ProjectCard
             name="Nook Model Management"
+            slug="https://www.nookmodelmanagement.com/"
             roles={["ux/ui", "Frontend", "Backend"]}
             description="Diseñé y programé un sitio limpio y elegante para una importante agencia de modelos en CDMX."
             imagen="/img/projects/nook/frame1.jpg"
           />
           <ProjectCard
             name="Liverpool"
+            slug="https://miseguro.liverpool.com.mx/seguro-de-auto"
             roles={["ux/ui", "Frontend"]}
             description="Rediseñé el flujo de contratación para Protección Celular en el conocido sitio de Liverpool."
             imagen="/img/projects/liverpool/frame1.jpg"

@@ -54,7 +54,9 @@ const Navbar = () => {
               Sobre mí
             </motion.a>
           </Link>
-          <motion.p
+          <motion.a
+            href="https://wa.me/0525560348476?text=¡Hola Obed!%20Visité tu portafolio."
+            target="__blank"
             onHoverStart={() => {
               setCursorHover(true);
               setCursorContact(true);
@@ -65,7 +67,7 @@ const Navbar = () => {
             }}
           >
             Contáctame
-          </motion.p>
+          </motion.a>
         </div>
       </div>
     </nav>

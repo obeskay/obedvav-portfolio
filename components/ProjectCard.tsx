@@ -3,38 +3,16 @@ import { motion } from "framer-motion";
 import TextReveal from "./TextReveal";
 import ParallaxItem from "./ParallaxItem";
 import Button from "./Button";
+import Link from "next/link";
+import { useAppContext } from "./context/GeneralContext";
 
 const ProjectCard = (props) => {
-  const wrapperAnimation = {
-    show: {
-      transition: {
-        delayChildren: 0.25,
-        staggerChildren: 0.1,
-      },
-    },
-  };
-  const itemAnimation = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-    },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: [0.4, 0.13, 0.23, 0.96],
-        duration: 1,
-      },
-    },
-    exit: {
-      opacity: 0,
-      y: 20,
-      transition: {
-        ease: [0.4, 0.13, 0.23, 0.96],
-        duration: 0.5,
-      },
-    },
-  };
+  const {
+    wrapperAnimation,
+    itemAnimation,
+    imageWrapperAnimation,
+    imageAnimation,
+  } = useAppContext();
   return (
     <>
       <motion.div
@@ -46,9 +24,13 @@ const ProjectCard = (props) => {
       >
         <motion.div className="container h-[100vh] flex justify-center mx-auto items-center space-x-[2rem]">
           <motion.div className="relative ml-0 mr-auto space-y-[1.5rem]">
-            <TextReveal className="text-[7vw] md:text-[4vw]">
-              {props.name}
-            </TextReveal>
+            <Link href={`${props.slug}`}>
+              <motion.a>
+                <TextReveal className="text-[7vw] md:text-[4vw]">
+                  {props.name}
+                </TextReveal>
+              </motion.a>
+            </Link>
             <motion.div className="space-x-[1rem] ">
               {props.roles.map((role) => (
                 <motion.label
@@ -63,66 +45,62 @@ const ProjectCard = (props) => {
             <motion.p className="text-xl" variants={itemAnimation}>
               {props.description}
             </motion.p>
-            <motion.div variants={itemAnimation} className="inline-block">
-              <Button>Mira los detalles</Button>
-            </motion.div>
+            <Link href={`${props.slug}`}>
+              <motion.a variants={itemAnimation} className="inline-block">
+                <Button>Ir al sitio</Button>
+              </motion.a>
+            </Link>
           </motion.div>
           <ParallaxItem className="relative ml-auto mr-0">
-            <motion.div
-              initial={{ height: 0 }}
-              animate={{ height: 380 }}
-              exit={{ opacity: 0 }}
-              transition={{
-                duration: 1.5,
-                ease: [0.4, 0.13, 0.23, 0.96],
-                delay: 0.25,
-              }}
-              className="relative w-[400px] xl:w-[560px] overflow-hidden bg-dark/10"
-            >
-              <motion.img
-                initial={{ scale: 1.25 }}
-                animate={{ scale: 1 }}
-                exit={{ y: "100%", opacity: 0 }}
-                whileHover={{ scale: 1.1 }}
-                transition={{
-                  duration: 1.25,
-                  ease: [0.4, 0.13, 0.23, 0.96],
-                }}
-                src={props.imagen}
-                className="object-cover w-full h-full m-auto"
-              />
-            </motion.div>
+            <Link href={`${props.slug}`}>
+              <motion.a
+                variants={imageWrapperAnimation}
+                className="relative block w-[400px] xl:w-[560px] overflow-hidden"
+              >
+                <motion.img
+                  variants={imageAnimation}
+                  src={props.imagen}
+                  className="object-cover w-full h-full m-auto bg-dark/5"
+                />
+              </motion.a>
+            </Link>
           </ParallaxItem>
         </motion.div>
       </motion.div>
 
       <motion.div className="md:hidden p-[1rem] py-[4rem] space-y-[1.5rem]">
-        <TextReveal className="text-[7vw] md:text-[4vw]">
-          {props.name}
-        </TextReveal>
+        <Link href={`${props.slug}`}>
+          <motion.a>
+            <TextReveal className="text-[7vw] md:text-[4vw]">
+              {props.name}
+            </TextReveal>
+          </motion.a>
+        </Link>
 
-        <motion.div
-          initial={{ height: 0 }}
-          animate={{ height: 228 }}
-          transition={{
-            duration: 1.5,
-            ease: [0.4, 0.13, 0.23, 0.96],
-            delay: 0.25,
-          }}
-          className="relative w-[full] mx-auto overflow-hidden z-[0] "
-        >
-          <motion.img
-            initial={{ scale: 1.25 }}
-            animate={{ scale: 1 }}
-            exit={{ y: "100%", opacity: 0 }}
+        <Link href={`${props.slug}`}>
+          <motion.a
+            initial={{ width: 0 }}
+            animate={{ width: "100%" }}
             transition={{
-              duration: 1.25,
+              duration: 1.5,
               ease: [0.4, 0.13, 0.23, 0.96],
+              delay: 0.25,
             }}
-            src={props.imagen}
-            className="object-cover w-full h-full m-auto"
-          />
-        </motion.div>
+            className="relative h-[320px] block w-[full] mx-auto overflow-hidden z-[0] "
+          >
+            <motion.img
+              initial={{ scale: 1.25 }}
+              animate={{ scale: 1 }}
+              exit={{ width: 0, opacity: 0 }}
+              transition={{
+                duration: 1.25,
+                ease: [0.4, 0.13, 0.23, 0.96],
+              }}
+              src={props.imagen}
+              className="block object-cover w-full h-full m-auto"
+            />
+          </motion.a>
+        </Link>
         <motion.div className="space-x-[1rem] ">
           {props.roles.map((role) => (
             <motion.label
@@ -135,9 +113,11 @@ const ProjectCard = (props) => {
           ))}
         </motion.div>
         <motion.p variants={itemAnimation}>{props.description}</motion.p>
-        <motion.div variants={itemAnimation} className="inline-block">
-          <Button>Ver detalles</Button>
-        </motion.div>
+        <Link href={`${props.slug}`}>
+          <motion.a variants={itemAnimation} className="inline-block">
+            <Button>Ir al sitio</Button>
+          </motion.a>
+        </Link>
       </motion.div>
     </>
   );
