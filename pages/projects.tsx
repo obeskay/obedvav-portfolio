@@ -103,9 +103,9 @@ const projects = () => {
           />
           <ProjectCard
             name="Liverpool"
-            slug="https://miseguro.liverpool.com.mx/seguro-de-auto"
+            slug="https://miseguro.liverpool.com.mx/proteccion-celular"
             roles={["ux/ui", "Frontend"]}
-            description="Diseñé y programé la landing page de Seguros en el conocido sitio de Liverpool."
+            description="Diseñé y programé el nuevo flujo de Protección Celular en el conocido sitio de Liverpool."
             imagen="/img/projects/liverpool/frame1.jpg"
           />
         </motion.div>

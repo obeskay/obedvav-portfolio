@@ -25,7 +25,7 @@ const ProjectCard = (props) => {
         <motion.div className="container h-[100vh] flex justify-center mx-auto items-center space-x-[2rem]">
           <motion.div className="relative ml-0 mr-auto space-y-[1.5rem]">
             <Link href={`${props.slug}`}>
-              <motion.a href={`${props.slug}`}>
+              <motion.a target="__blank" href={`${props.slug}`}>
                 <TextReveal className="text-[7vw] md:text-[4vw]">
                   {props.name}
                 </TextReveal>
@@ -47,6 +47,7 @@ const ProjectCard = (props) => {
             </motion.p>
             <Link href={`${props.slug}`}>
               <motion.a
+                target="__blank"
                 href={`${props.slug}`}
                 variants={itemAnimation}
                 className="inline-block"
@@ -58,6 +59,7 @@ const ProjectCard = (props) => {
           <ParallaxItem className="relative ml-auto mr-0">
             <Link href={`${props.slug}`}>
               <motion.a
+                target="__blank"
                 href={`${props.slug}`}
                 variants={imageWrapperAnimation}
                 className="relative block w-[400px] xl:w-[560px] overflow-hidden"
@@ -75,7 +77,7 @@ const ProjectCard = (props) => {
 
       <motion.div className="md:hidden p-[1rem] py-[4rem] space-y-[1.5rem]">
         <Link href={`${props.slug}`}>
-          <motion.a href={`${props.slug}`}>
+          <motion.a target="__blank" href={`${props.slug}`}>
             <TextReveal className="text-[7vw] md:text-[4vw]">
               {props.name}
             </TextReveal>
@@ -84,6 +86,7 @@ const ProjectCard = (props) => {
 
         <Link href={`${props.slug}`}>
           <motion.a
+            target="__blank"
             href={`${props.slug}`}
             initial={{ width: 0 }}
             animate={{ width: "100%" }}
@@ -121,6 +124,7 @@ const ProjectCard = (props) => {
         <motion.p variants={itemAnimation}>{props.description}</motion.p>
         <Link href={`${props.slug}`}>
           <motion.a
+            target="__blank"
             href={`${props.slug}`}
             variants={itemAnimation}
             className="inline-block"
