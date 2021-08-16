@@ -105,7 +105,7 @@ const projects = () => {
             name="Liverpool"
             slug="https://miseguro.liverpool.com.mx/seguro-de-auto"
             roles={["ux/ui", "Frontend"]}
-            description="Rediseñé el flujo de contratación para Protección Celular en el conocido sitio de Liverpool."
+            description="Diseñé y programé la landing page de Seguros en el conocido sitio de Liverpool."
             imagen="/img/projects/liverpool/frame1.jpg"
           />
         </motion.div>
