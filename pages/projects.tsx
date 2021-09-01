@@ -8,7 +8,7 @@ import { useAppContext } from "../components/context/GeneralContext";
 
 const projects = () => {
   const { wrapperAnimation, itemAnimation } = useAppContext();
-  const obedvavimg = "/img/obed/obedvav1.jpg";
+  const obeskayimg = "/img/obed/obeskay.jpg";
   return (
     <>
       <motion.div
@@ -37,7 +37,7 @@ const projects = () => {
                   fill="white"
                 />
               </svg>
-              <span className="ml-[1rem] hidden md:block">Regresar</span>
+              <span className="ml-[1rem] hidden md:block">Back</span>
             </Button>
           </motion.a>
         </Link>
@@ -63,7 +63,7 @@ const projects = () => {
               ease: [0.4, 0.13, 0.23, 0.96],
             }}
             initial={{ opacity: 0 }}
-            src={obedvavimg}
+            src={obeskayimg}
             layoutId={`profile-img`}
             className="object-cover w-full h-full m-auto"
           />
@@ -91,21 +91,27 @@ const projects = () => {
             name="WOOW ¡Todo bien!"
             slug="https://woowtodobien.com/"
             roles={["ux/ui", "Frontend"]}
-            description="Cree la experiencia de usuario para la startup de seguros que busca romper con el aburrido estereotipo de aseguradora."
+            description={[
+              "I created the user experience for the insurance startup that wants to break from start to finish the boring concept around insurance world. ",
+              <span className="text-dark/50">(As Protec employee)</span>,
+            ]}
             imagen="/img/projects/woow/frame1.jpg"
           />
           <ProjectCard
             name="Nook Model Management"
             slug="https://www.nookmodelmanagement.com/"
             roles={["ux/ui", "Frontend", "Backend"]}
-            description="Diseñé y programé un sitio limpio y elegante para una importante agencia de modelos en CDMX."
+            description="I designed and programmed an elegant and clean website for an important model agency in CDMX."
             imagen="/img/projects/nook/frame1.jpg"
           />
           <ProjectCard
             name="Liverpool"
             slug="https://miseguro.liverpool.com.mx/proteccion-celular"
             roles={["ux/ui", "Frontend"]}
-            description="Diseñé y programé el nuevo flujo de Protección Celular en el conocido sitio de Liverpool."
+            description={[
+              "I designed and programmed the new insurance product Protección Celular for Liverpool. ",
+              <span className="text-dark/50">(As Protec employee)</span>,
+            ]}
             imagen="/img/projects/liverpool/frame1.jpg"
           />
         </motion.div>

@@ -6,8 +6,8 @@ import TextReveal from "../components/TextReveal";
 import { useAppContext } from "../components/context/GeneralContext";
 
 const me = () => {
-  const obedvavimg = "/img/obed/obedvav1.jpg";
-  const { wrapperAnimation, itemAnimation } = useAppContext();
+  const obeskayimg = "/img/obed/obeskay.jpg";
+  const { wrapperAnimation, itemAnimation, customEase } = useAppContext();
   return (
     <>
       <motion.div
@@ -17,7 +17,7 @@ const me = () => {
         exit={{ translateX: "100%", opacity: 0 }}
         transition={{
           duration: 0.75,
-          ease: [0.4, 0.13, 0.23, 0.96],
+          ease: customEase,
           delay: 0.25,
         }}
       >
@@ -36,7 +36,7 @@ const me = () => {
                   fill="white"
                 />
               </svg>
-              <span className="ml-[1rem] hidden md:block">Regresar</span>
+              <span className="ml-[1rem] hidden md:block">Back</span>
             </Button>
           </a>
         </Link>
@@ -53,7 +53,7 @@ const me = () => {
             <motion.div
               transition={{
                 duration: 1.5,
-                ease: [0.4, 0.13, 0.23, 0.96],
+                ease: customEase,
                 delay: 0.25,
               }}
               className="relative flex-shrink-0 w-[50vw] h-[50vh] md:w-[35vw] md:h-[-webkit-fill-available] m-auto overflow-hidden"
@@ -62,12 +62,12 @@ const me = () => {
               <motion.img
                 transition={{
                   duration: 1.25,
-                  ease: [0.4, 0.13, 0.23, 0.96],
+                  ease: customEase,
                 }}
                 animate={{
                   borderRadius: "0rem",
                 }}
-                src={obedvavimg}
+                src={obeskayimg}
                 layoutId={`profile-img`}
                 className="object-cover w-full h-full m-auto"
               />
@@ -76,55 +76,55 @@ const me = () => {
 
           <motion.div className="w-full md:max-h-[100%] md:overflow-y-scroll flex justify-center p-[1rem] md:p-[4rem] md:py-[8rem] md:pl-0">
             <motion.div className="max-w-[520px] space-y-[1.5rem] text-lg">
-              <TextReveal className="text-3xl">Hola, soy Obed </TextReveal>
+              <TextReveal className="text-3xl">Heey! I'm Obed </TextReveal>
 
               <motion.div className="space-x-[1rem]">
                 <motion.label
                   variants={itemAnimation}
                   className="text-sm spaced-text"
                 >
-                  Diseñador UX/UI
+                  UX/UI designer
                 </motion.label>
                 <motion.label
                   variants={itemAnimation}
                   className="text-sm spaced-text"
                 >
-                  Desarrollador Frontend
+                  Frontend developer
                 </motion.label>
               </motion.div>
               <motion.p variants={itemAnimation}>
-                Un experimentado diseñador enfocado en entregar experiencias
-                únicas que resuelvan las necesidades del usuario final.
+                An experienced visual artist focused on creating unique digital
+                experiences that solve end-user needs.
               </motion.p>
               <motion.p variants={itemAnimation}>
-                A temprana edad me interesó el arte y la tecnología; por lo que
-                comencé a desarrollar prototipos de aplicaciones y sitios web
-                desde hace más de 5 años. Más tarde aprendí de manera
-                autodidacta a programar y desde entonces me he dedicado a
-                aportar "mi granito de arena" para transformar Internet en un
-                lugar accesible e inclusivo que nos deje una buena experiencia
-                de uso y facilite las tareas diarias a todos.
+                Since I was young I was interested on art and technology, so I
+                started developing prototypes of apps and websites from more
+                than five years ago. Later on I taught myself to program and
+                since then I have dedicated myself to contribute "my grain of
+                sand" to transform the Internet into an accessible and inclusive
+                place that leaves us a good user experience and facilitates
+                daily tasks for everyone.
               </motion.p>
               <motion.p variants={itemAnimation}>
-                Creo firmemente que navegar por una web o una app no debería ser
-                una tarea compleja para nadie y esto se logra a través de la
-                intersección entre estética y funcionalidad.
+                I firmly believe that navigating a website or an app should not
+                be a complex task for anyone and this is achieved through the
+                intersection between aesthetics and functionality.
               </motion.p>
               <motion.hr variants={itemAnimation} />
               <motion.div className="space-y-[1rem] pb-[4rem] md:pb-[8rem]">
                 <motion.a
-                  href="mailto:obedvav@gmail.com"
+                  href="mailto:obeskay.mail@gmail.com"
                   variants={itemAnimation}
                   className="block text-sm spaced-text"
                 >
-                  Correo: obedvav@gmail.com
+                  Email: obeskay.mail@gmail.com
                 </motion.a>
                 <motion.a
                   href="tel:5560348476"
                   variants={itemAnimation}
                   className="block text-sm spaced-text"
                 >
-                  Teléfono: 55 6034 8476
+                  Phone: 55 6034 8476
                 </motion.a>
               </motion.div>
             </motion.div>

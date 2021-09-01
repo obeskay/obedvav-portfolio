@@ -5,7 +5,7 @@ import TextReveal from "../../components/TextReveal";
 import { useAppContext } from "../../components/context/GeneralContext";
 
 const woow = () => {
-  const obedvavimg = "/img/obed/obedvav1.jpg";
+  const obeskayimg = "/img/obed/obeskay.jpg";
   const {
     wrapperAnimation,
     itemAnimation,
@@ -35,7 +35,7 @@ const woow = () => {
               ease: [0.4, 0.13, 0.23, 0.96],
             }}
             initial={{ opacity: 0 }}
-            src={obedvavimg}
+            src={obeskayimg}
             layoutId={`profile-img`}
             className="object-cover w-full h-full m-auto"
           />

@@ -57,7 +57,7 @@ const Cursor = () => {
             className="absolute  z-[99] backdrop-blur-sm space-y-[0.25rem] text-[#C57A69] top-[1.5rem] right-0 flex-shirnk-0 text-right"
           >
             <motion.p className="text-[0.25rem] uppercase tracking-[0.075rem]">
-              obedvav@gmail.com
+              obeskay.mail@gmail.com
             </motion.p>
             <motion.p className="text-[0.25rem] uppercase tracking-[0.075rem]">
               55 6034 8476

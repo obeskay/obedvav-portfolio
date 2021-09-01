@@ -9,8 +9,8 @@ import { useAppContext } from "../components/context/GeneralContext";
 
 const fullConfig = resolveConfig(tailwindConfig);
 const index = () => {
-  const obedvavimg = "img/obed/obedvav1.jpg";
-  const { wrapperAnimation, itemAnimation } = useAppContext();
+  const obeskayimg = "img/obed/obeskay.jpg";
+  const { wrapperAnimation, itemAnimation, customEase } = useAppContext();
 
   return (
     <motion.div
@@ -26,7 +26,7 @@ const index = () => {
           <motion.div
             transition={{
               duration: 1.5,
-              ease: [0.4, 0.13, 0.23, 0.96],
+              ease: customEase,
               delay: 0.25,
             }}
             initial={{ opacity: 0 }}
@@ -38,9 +38,9 @@ const index = () => {
             <motion.img
               transition={{
                 duration: 1.25,
-                ease: [0.4, 0.13, 0.23, 0.96],
+                ease: customEase,
               }}
-              src={obedvavimg}
+              src={obeskayimg}
               layoutId={`profile-img`}
               className="object-cover w-full h-full m-auto "
             />
@@ -51,7 +51,7 @@ const index = () => {
               transition={{
                 duration: 1,
                 delay: 0.75,
-                ease: [0.4, 0.13, 0.23, 0.96],
+                ease: customEase,
               }}
               className="after:block after:absolute after:w-full after:h-[50%] after:inset-0 after:top-auto after:bg-gradient-to-t after:from-black md:after:hidden"
             />
@@ -60,7 +60,7 @@ const index = () => {
 
         <motion.div className="z-10 mb-[2rem] mt-auto md:my-auto space-y-[1.5rem] max-w-[520px] text-light md:text-dark">
           <TextReveal className="text-3xl ">
-            Hago que disfrutes estar en un sitio web
+            I make you enjoy a website
           </TextReveal>
 
           <motion.div className="font-lg flex flex-wrap md:flex-nowrap space-y-[1rem] md:space-x-[1rem] md:space-y-0">
@@ -74,7 +74,7 @@ const index = () => {
                     <span className="text-[1.5rem] leading-[0] mr-[0.5rem]">
                       ⚡️
                     </span>{" "}
-                    Mira mi trabajo
+                    My work
                   </Button>
                 </a>
               </Link>
@@ -92,7 +92,7 @@ const index = () => {
                     <span className="text-[1.5rem] leading-[0] mr-[0.5rem]">
                       😃
                     </span>{" "}
-                    Conóceme
+                    Me
                   </Button>
                 </a>
               </Link>

@@ -11,7 +11,7 @@ function App({ Component, pageProps, router }) {
   return (
     <GeneralContext>
       <Head>
-        <title>obedvav | portafolio</title>
+        <title>obeskay | portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

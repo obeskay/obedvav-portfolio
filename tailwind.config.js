@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Montserrat", "sans-serif"],
+        sans: ["Poppins", "sans-serif"],
       },
       colors: {
         dark: "#023437",
@@ -76,7 +76,7 @@ module.exports = {
         h1: { "@apply text-3xl": {} },
         h2: { "@apply text-2xl": {} },
         h3: { "@apply text-xl": {} },
-        ".spaced-text": { "@apply tracking-[0.25rem] uppercase": "" },
+        ".spaced-text": { "@apply tracking-[0.2rem] uppercase": "" },
       });
     }),
   ],

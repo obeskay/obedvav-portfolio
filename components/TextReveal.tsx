@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useAppContext } from "../components/context/GeneralContext";
 
 const TextReveal = ({ children, textCenter = false, ...rest }) => {
   let letters = children.split(" ");
-
+  const { customEase } = useAppContext();
   return (
     <motion.div
       className={`flex flex-wrap ${textCenter ? "justify-center" : ""}`}
@@ -11,7 +12,7 @@ const TextReveal = ({ children, textCenter = false, ...rest }) => {
       {letters.map((letter, i) => (
         <motion.div
           key={children + i}
-          className="flex-shrink-0 inline-block overflow-hidden"
+          className="flex-shrink-0 inline-block overflow-hidden mr-[1rem]"
         >
           <motion.div
             className="inline-block"
@@ -21,11 +22,10 @@ const TextReveal = ({ children, textCenter = false, ...rest }) => {
             variants={{
               visible: (i) => ({
                 y: 0,
-                skewY: 0,
                 transition: {
                   delay: i * 0.1,
                   duration: 0.5,
-                  ease: [0.4, 0.13, 0.23, 0.96],
+                  ease: customEase,
                 },
               }),
               exit: (i) => ({
@@ -33,14 +33,14 @@ const TextReveal = ({ children, textCenter = false, ...rest }) => {
                 opacity: 0,
                 transition: {
                   duration: 0.5,
-                  ease: [0.4, 0.13, 0.23, 0.96],
+                  ease: customEase,
                 },
               }),
             }}
             {...rest}
             custom={i}
           >
-            {letter + (i !== letter.length - 1 ? "\u00A0" : "")}
+            {letter + (i !== letter.length - 1 ? "" : "")}
           </motion.div>
         </motion.div>
       ))}

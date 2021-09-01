@@ -52,7 +52,7 @@ const ProjectCard = (props) => {
                 variants={itemAnimation}
                 className="inline-block"
               >
-                <Button>Ir al sitio</Button>
+                <Button>Visit website</Button>
               </motion.a>
             </Link>
           </motion.div>
@@ -129,7 +129,7 @@ const ProjectCard = (props) => {
             variants={itemAnimation}
             className="inline-block"
           >
-            <Button>Ir al sitio</Button>
+            <Button>Visit website</Button>
           </motion.a>
         </Link>
       </motion.div>

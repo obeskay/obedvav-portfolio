@@ -14,11 +14,13 @@ const GeneralContext = ({ children }) => {
     setCursorContact(false);
   }, [router]);
 
+  const customEase = [0.21, 0.83, 0.43, 0.99];
+
   const wrapperAnimation = {
     show: {
       transition: {
         delayChildren: 0.25,
-        staggerChildren: 0.1,
+        staggerChildren: 0.125,
       },
     },
   };
@@ -32,7 +34,7 @@ const GeneralContext = ({ children }) => {
       opacity: 1,
       y: 0,
       transition: {
-        ease: [0.4, 0.13, 0.23, 0.96],
+        ease: customEase,
         duration: 0.75,
       },
     },
@@ -40,7 +42,7 @@ const GeneralContext = ({ children }) => {
       opacity: 0,
       y: 20,
       transition: {
-        ease: [0.4, 0.13, 0.23, 0.96],
+        ease: customEase,
         duration: 0.5,
       },
     },
@@ -53,14 +55,14 @@ const GeneralContext = ({ children }) => {
     show: {
       // opacity: 1,
       transition: {
-        ease: [0.4, 0.13, 0.23, 0.96],
+        ease: customEase,
         duration: 0.75,
       },
     },
     exit: {
       // opacity: 0,
       transition: {
-        ease: [0.4, 0.13, 0.23, 0.96],
+        ease: customEase,
         duration: 0.5,
       },
     },
@@ -69,24 +71,24 @@ const GeneralContext = ({ children }) => {
   const imageAnimation = {
     hidden: {
       opacity: 0,
-      translateX: "-50%",
+      translateY: "50%",
       scale: 1.1,
     },
     show: {
       opacity: 1,
-      translateX: 0,
+      translateY: 0,
       scale: 1,
       transition: {
-        ease: [0.4, 0.13, 0.23, 0.96],
+        ease: customEase,
         duration: 1.5,
       },
     },
     exit: {
       opacity: 0,
-      translateX: "75%",
+      translateY: "75%",
       scale: 1.1,
       transition: {
-        ease: [0.4, 0.13, 0.23, 0.96],
+        ease: customEase,
         duration: 0.75,
       },
     },
@@ -103,6 +105,7 @@ const GeneralContext = ({ children }) => {
         isCursorContact,
         setCursorContact,
         imageAnimation,
+        customEase,
       }}
     >
       {children}
