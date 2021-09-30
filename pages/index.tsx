@@ -60,7 +60,7 @@ const index = () => {
 
         <motion.div className="z-10 mb-[2rem] mt-auto md:my-auto space-y-[1.5rem] max-w-[520px] text-light md:text-dark">
           <TextReveal className="text-3xl ">
-            I make you enjoy a website
+            I build enjoyable websites
           </TextReveal>
 
           <motion.div className="font-lg flex flex-wrap md:flex-nowrap space-y-[1rem] md:space-x-[1rem] md:space-y-0">
