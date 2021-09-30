@@ -5,7 +5,7 @@ import TextReveal from "../../components/TextReveal";
 import { useAppContext } from "../../components/context/GeneralContext";
 
 const woow = () => {
-  const obeskayimg = "/img/obed/obeskay.jpg";
+  const obeskayimg = "/img/obed/obeskay.webp";
   const {
     wrapperAnimation,
     itemAnimation,

@@ -8,7 +8,7 @@ import { useAppContext } from "../components/context/GeneralContext";
 
 const projects = () => {
   const { wrapperAnimation, itemAnimation } = useAppContext();
-  const obeskayimg = "/img/obed/obeskay.jpg";
+  const obeskayimg = "/img/obed/obeskay.webp";
   return (
     <>
       <motion.div

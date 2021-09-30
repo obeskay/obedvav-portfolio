@@ -9,7 +9,7 @@ import { useAppContext } from "../components/context/GeneralContext";
 
 const fullConfig = resolveConfig(tailwindConfig);
 const index = () => {
-  const obeskayimg = "img/obed/obeskay.jpg";
+  const obeskayimg = "img/obed/obeskay.webp";
   const { wrapperAnimation, itemAnimation, customEase } = useAppContext();
 
   return (
