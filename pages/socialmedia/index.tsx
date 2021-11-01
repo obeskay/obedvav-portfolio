@@ -1,16 +1,87 @@
 import React from "react";
 import dynamic from "next/dynamic";
-const ProjectCard = dynamic(() => import("../components/ProjectCard"), {
+const ProjectCard = dynamic(() => import("../../components/ProjectCard"), {
   ssr: false,
 });
-import { motion } from "framer-motion";
-import Button from "../components/Button";
+import { AnimatePresence, motion } from "framer-motion";
+import TextReveal from "../../components/TextReveal";
+import Button from "../../components/Button";
 import Link from "next/link";
-import { useAppContext } from "../components/context/GeneralContext";
+import { useAppContext } from "../../components/context/GeneralContext";
+const SocialMediaSlider = dynamic(
+  () => import("../../components/SocialMediaSlider"),
+  {
+    ssr: false,
+  }
+);
 
-const projects = () => {
+const index = () => {
   const { wrapperAnimation, itemAnimation } = useAppContext();
   const obeskayimg = "/img/obed/obeskay.webp";
+
+  const projects = [
+    {
+      name: "Sinarte",
+      photo: "/img/projects/socialmedia/sinarte/1.webp",
+      height: 440,
+      width: 352,
+    },
+    {
+      name: "Sinarte",
+      photo: "/img/projects/socialmedia/sinarte/2.webp",
+      height: 440,
+      width: 659,
+    },
+    {
+      name: "G-raf",
+      photo: "/img/projects/socialmedia/graf/1.webp",
+      height: 440,
+      width: 440,
+    },
+    {
+      name: "G-raf",
+      photo: "/img/projects/socialmedia/graf/2.webp",
+      height: 440,
+      width: 440,
+    },
+    {
+      name: "G-raf",
+      photo: "/img/projects/socialmedia/graf/3.webp",
+      height: 440,
+      width: 247.5,
+    },
+    // {
+    //   name: "G-raf",
+    //   photo: "/img/projects/socialmedia/graf/4.webp",
+    //   height: 440,
+    //   width: 247.5,
+    // },
+    {
+      name: "Comfort Jeans",
+      photo: "/img/projects/socialmedia/comfortjeans/1.webp",
+      height: 440,
+      width: 352,
+    },
+    {
+      name: "Comfort Jeans",
+      photo: "/img/projects/socialmedia/comfortjeans/3.webp",
+      height: 440,
+      width: 352,
+    },
+    {
+      name: "Indigo Lab",
+      photo: "/img/projects/socialmedia/indigolab/2.webp",
+      height: 440,
+      width: 440,
+    },
+    {
+      name: "Indigo Lab",
+      photo: "/img/projects/socialmedia/indigolab/3.webp",
+      height: 440,
+      width: 440,
+    },
+  ];
+
   return (
     <>
       <motion.div
@@ -87,38 +158,15 @@ const projects = () => {
         animate="show"
         exit="exit"
       >
-        <motion.div className="w-full">
-          <ProjectCard
-            name="WOOW ¡Todo bien!"
-            slug="https://woowtodobien.com/"
-            roles={["ux/ui", "Frontend"]}
-            description={[
-              "I created the user experience for the insurance startup that wants to break from start to finish the boring concept around insurance world. ",
-              <span className="text-dark/50">(As Protec employee)</span>,
-            ]}
-            imagen="/img/projects/woow/frame1.jpg"
-          />
-          <ProjectCard
-            name="Nook Model Management"
-            slug="https://www.nookmodelmanagement.com/"
-            roles={["ux/ui", "Frontend", "Backend"]}
-            description="I designed and programmed an elegant and clean website for an important model agency in CDMX."
-            imagen="/img/projects/nook/frame1.jpg"
-          />
-          <ProjectCard
-            name="Liverpool"
-            slug="https://miseguro.liverpool.com.mx/proteccion-celular"
-            roles={["ux/ui", "Frontend"]}
-            description={[
-              "I designed and programmed the new insurance product Protección Celular for Liverpool. ",
-              <span className="text-dark/50">(As Protec employee)</span>,
-            ]}
-            imagen="/img/projects/liverpool/frame1.jpg"
-          />
+        <motion.div className="container h-[100vh] flex flex-col justify-center mx-auto items-center space-y-[4rem] p-[2rem] lg:pt-[6rem]">
+          <TextReveal className="text-2xl lg:text-3xl">
+            My social media work:
+          </TextReveal>
+          <SocialMediaSlider images={projects} />
         </motion.div>
       </motion.div>
     </>
   );
 };
 
-export default projects;
+export default index;

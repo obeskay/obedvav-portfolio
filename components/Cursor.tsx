@@ -10,6 +10,7 @@ import { useAppContext } from "./context/GeneralContext";
 const Cursor = () => {
   const { isCursorHover, setCursorHover } = useAppContext();
   const { isCursorContact, setCursorContact } = useAppContext();
+
   const cursorX = useMotionValue(-10);
   const cursorY = useMotionValue(-10);
 

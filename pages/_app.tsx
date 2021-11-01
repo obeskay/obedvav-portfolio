@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 
 import "../styles/global.css";
 import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
 
 function App({ Component, pageProps, router }) {
   return (
