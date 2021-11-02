@@ -139,26 +139,26 @@ const vapsmx = () => {
               <TextReveal className="text-3xl md:text-[4vw]">
                 Para sus redes sociales
               </TextReveal>
-              <div className="flex space-x-8">
+              <div className="flex mx-auto space-x-8 md:m-l-0">
                 <ParallaxItem className="relative">
                   <InstagramIcon
                     className="text-primary"
-                    height={96}
-                    width={96}
+                    height={80}
+                    width={80}
                   />
                 </ParallaxItem>
                 <ParallaxItem offset={350} className="relative">
                   <FacebookIcon
                     className="text-primary"
-                    height={96}
-                    width={96}
+                    height={80}
+                    width={80}
                   />
                 </ParallaxItem>
                 <ParallaxItem offset={90} className="relative">
                   <TwitterIcon
                     className="text-primary"
-                    height={96}
-                    width={96}
+                    height={80}
+                    width={80}
                   />
                 </ParallaxItem>
               </div>
