@@ -184,7 +184,7 @@ const vapsmx = () => {
                 </li>
                 <li className="flex items-center space-x-4">
                   <CheckIcon className="w-8 h-8 text-primary" />
-                  <span>Post e historia/fleet</span>
+                  <span>Post e historia</span>
                 </li>
                 <li className="flex items-center space-x-4">
                   <CheckIcon className="w-8 h-8 text-primary" />
