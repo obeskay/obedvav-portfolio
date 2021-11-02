@@ -167,7 +167,7 @@ const vapsmx = () => {
           <div className="flex flex-col md:flex-row items-center justify-center w-full min-h-[100vh] space-y-[2rem] md:space-y-0 md:space-x-[4rem]">
             <motion.div className="relative mx-auto md:ml-0 h-100 space-y-[4rem] mt-[12rem] md:mt-0">
               <TextReveal className="text-[12vw] md:text-[4vw] ">
-                11 post mensuales:
+                11 posts mensuales:
               </TextReveal>
               <ul className="text-2xl md:text-[2.5vw] space-y-8">
                 <li className="flex items-center space-x-4">
@@ -194,7 +194,7 @@ const vapsmx = () => {
               <div className="space-y-4">
                 <p className="text-xl">¿Por qué 11 post?</p>
                 <p>
-                  Con 11 post es suficiente para tener una cuenta activa en
+                  Con 11 posts es suficiente para tener una cuenta activa en
                   cualquier plataforma, logrando tener contenido cada tercer
                   día.
                 </p>
