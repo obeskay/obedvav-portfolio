@@ -158,9 +158,9 @@ const index = () => {
         animate="show"
         exit="exit"
       >
-        <motion.div className="container h-[100vh] flex flex-col justify-center mx-auto items-center space-y-[4rem] p-[2rem] lg:pt-[6rem]">
-          <TextReveal className="text-2xl lg:text-3xl">
-            My social media work:
+        <motion.div className="container min-h-[100vh] flex flex-col justify-center mx-auto items-center space-y-[4rem] p-[2rem] md:pt-[6rem]">
+          <TextReveal className="text-2xl text-center lg:text-3xl">
+            Creación de contenido para redes sociales
           </TextReveal>
           <SocialMediaSlider images={projects} />
         </motion.div>

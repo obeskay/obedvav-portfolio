@@ -14,7 +14,7 @@ const SocialMediaSlider = ({ images }) => {
       spaceBetween={24}
       centeredSlides={true}
       mousewheel={true}
-      className="w-full h-full "
+      className="w-full !h-full"
       virtual
       navigation={true}
       breakpoints={{
@@ -22,26 +22,26 @@ const SocialMediaSlider = ({ images }) => {
           slidesPerView: 1,
         },
         "@1.50": {
-          slidesPerView: 3,
+          slidesPerView: 4,
         },
       }}
     >
       {images.map((image, index) => (
         <SwiperSlide key={image.photo} virtualIndex={index}>
-          <p>Para: {image.name}</p>
+          <p className="mb-8 text-center">Para: {image.name}</p>
           <div
-            className="relative block mx-auto -translate-y-1/2 top-1/2"
+            className="relative flex items-center justify-center w-full min-h-full mx-auto"
             style={{
-              height: `${image.height / 2} !important`,
-              width: `${image.width / 2} !important`,
+              maxHeight: `${image.height}`,
+              maxWidth: `${image.width}`,
             }}
           >
             <Image
               height={image.height}
               width={image.width}
               src={image.photo}
+              className="mx-auto my-auto"
               placeholder="blur"
-              layout={"responsive"}
               blurDataURL="/img/placeholder.webp"
             />
           </div>
